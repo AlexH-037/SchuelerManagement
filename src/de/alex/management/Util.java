@@ -56,6 +56,16 @@ public class Util {
 		return klassen;
 	}
 	
+	public static int getSchuelerInKlasse(String klasse) {
+		int schueler = 0;
+		for(Schueler sch : Main.getManager().schueler) {
+			if(sch.getKlasse().trim().equalsIgnoreCase(klasse.trim())) {
+				schueler++;
+			}
+		}
+		return schueler;
+	}
+	
 	public static ArrayList<String> getFaecher() {
 		ArrayList<String> faecher = new ArrayList<String>();
 		for(Lehrer leh : Main.getManager().lehrer) {

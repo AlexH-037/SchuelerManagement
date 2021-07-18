@@ -244,7 +244,7 @@ public class UpdateUtil {
 		List<String> klassen = Util.getKlassen();
 		Collections.sort(klassen);
 		for(String s : klassen) {
-			JLabel label = new JLabel(s);
+			JLabel label = new JLabel(s + " (" + Util.getSchuelerInKlasse(s) + " Schüler)");
 			label.setFont(new Font("Verdana", Font.BOLD, 11));
 			label.setBounds(2, height, 850, 12);
 			panel.add(label);
